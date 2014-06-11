@@ -44,7 +44,7 @@ function TradeskillSchematics:new(o)
 end
 
 function TradeskillSchematics:Init()
-    Apollo.RegisterAddon(self)
+    Apollo.RegisterAddon(self, nil, nil, {"DoctorVanGogh:Lib:AddonRegistry"})
 end
 
 function TradeskillSchematics:OnSave(eType)
@@ -63,6 +63,9 @@ function TradeskillSchematics:OnRestore(eType, tSavedData)
 end
 
 function TradeskillSchematics:OnLoad()
+	local AddonRegistry = Apollo.GetPackage("DoctorVanGogh:Lib:AddonRegistry").tPackage
+	AddonRegistry:RegisterAddon(self, "Tradeskills", "TradeskillSchematics")
+
 	self.xmlDoc = XmlDoc.CreateFromFile("TradeskillSchematics.xml")
 	self.xmlDoc:RegisterCallback("OnDocumentReady", self)
 end

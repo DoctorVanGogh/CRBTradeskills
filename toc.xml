@@ -1,5 +1,6 @@
-<Addon Name="CRBTradeskills2" APIVersion="8" Author="Carbine" Version="1" Description="Hookable replacement for Carbine&apos;s Tradeskills Addon">
-    <Script Name="TradeskillTree.lua"/>
+<Addon Name="CRBTradeskills" APIVersion="8" Author="Carbine" Version="1" Description="Hookable replacement for Carbine&apos;s Tradeskills Addon">
+    <Script Name="lib/AddonRegistry/AddonRegistry.lua"/>     
+	<Script Name="TradeskillTree.lua"/>
     <Form Name="TradeskillTree.xml"/>
     <Script Name="TradeskillSchematics.lua"/>
     <Form Name="TradeskillSchematics.xml"/>
